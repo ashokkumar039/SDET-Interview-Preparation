@@ -1,0 +1,44 @@
+Breaking down BDD for Test Automation Engineers & SDET's   :-
+--------------------------------------------------------------
+
+BDD is a software development approach that promotes collaboration among developers, testers, and non-technical stakeholders in the software development process. 
+
+BDD means Behavior Driven Development 🌟 
+
+❓ ❓ What are different files used in BDD approach? ❓ ❓
+
+1) Feature Files:
+Extension: .feature
+Purpose: Feature files are written in a natural language format using the Gherkin syntax. They describe the intended behavior of a software feature from the end user's perspective
+
+2) Step Definition Files:
+Extension: Varies based on the programming language (e.g., .java, .js, .py).
+Purpose: Step definition files contain the executable code that maps to the steps defined in the feature files
+
+3) Runner Files:
+Extension: Varies based on the programming language (e.g., .java, .js, .py).
+Purpose: Runner files are used to configure and execute the tests
+
+4) Configuration Files:
+Examples: cucumber.yml, behave.ini, etc.
+Purpose: Configuration files are used to set up and configure the BDD framework. They may include settings related to output formats, parallel execution etc.
+
+5) Hooks Files:
+Extension: Varies based on the programming language (e.g., .java, .js, .py).
+Purpose: Hooks files contain code that is executed at specific points during the test execution lifecycle. Hooks are often used for setup and teardown task
+
+6) Test Data Files: 
+Examples: Can be .json, .xlsx, .csv etc. as per the requirement or developers.
+
+❓ ❓ Implementing BDD approach in different Programming Languages: 
+
+Cucumber: A widely used BDD tool that supports multiple programming languages such as Java, Ruby, and JavaScript. Cucumber helps in writing feature files, and its step definitions can be implemented in the desired programming language.
+
+SpecFlow: A BDD framework for .NET, compatible with languages like C# and VB.NET.
+
+Behave (Python): A BDD framework for Python applications
+
+Collaboration is key for BDD success ⁉ 
+
+BDD encourages collaboration between team members.
+Non-technical stakeholders can contribute to feature files, and developers/testers can work together to refine scenarios and step definitions.
