@@ -1,0 +1,56 @@
+Sort an array (integer array)
+Sort an array (character array)
+Max/Min from an array
+Find 2nd largest number from an array
+Sort char array & Find 3rd character from an char array
+Reverse a string
+Reverse an array with passing array in another method
+Swap two number without using 3rd variable
+Check Palindrome number (Palindrome->reads the same in backward as forward)
+Check Palindrome String
+Remove duplicate from a string / Remove the charcter from the string which occurs more than 1.
+Print occurance of each character in a string
+Add from ArrayList & remove in arrayList & Copy from ArrayList & Update from arrayList    ////add(),remove(),addAll(),set()
+All zero should be in first of string.(input - "3205015062085041")
+Print the data types name of number,String,character etc.  //name.getClass().getSimpleName()
+Integer to String---> String.valueOf(num) or Integer.toString(num)
+String to Integer---> Integer.valueOf(num) or Integer.parseInt(num)
+print "Hello" with dubble coats. System.out.println("\"Hello\"");
+Duplicate elements in array.
+print only alphabet present in a string(Take input string which contains char,num,symbols) ////Character.isLetter(ch)
+Check Anagram String(Take 2 string input- Race, Care)
+Sort a list using set
+Sort an array using TreeSet
+ArrayList program
+HashMap & TreeMap
+Print Common Elements in Two Array
+Copy Elements to Another Array //int arr2[] = Arrays.copyOf(arr,size);
+Find Missing number from an array
+Factorial Of a number
+Prime or not //If number divisible by 0 & number itself.
+Armstong number //153=1*1*1+5*5*5+3*3*3=153
+Print occurance of word in a string
+Extract last 4 character from a string
+Count vowels in a string
+Print non repeated character from a string
+Remove both duplicate character from a string
+Remove duplicate words from sentence
+Remove Special characters from a string
+Remove space from a string
+Reverse a sentence
+WAP to print multiple occurance character first in decending order & rest are in same format. //input-kapoor, output-ookapr
+------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+Todo-
+Java Basics & Theory
+All string pre-defined functions
+OOPS Concept & Program example of each concept
+Collection
+
+HashMap reverse according to key/value
+Linked list reversal
+Binary search

@@ -1,0 +1,762 @@
+'''''
+#Check leaf year
+def checkleafyear(year):
+    if year % 4 == 0 or year % 100 !=0 and year % 400 == 0:
+        print(str(year) + " is leaf year.")
+    else:
+        print("NOt a leaf year")
+
+year = int(input("Enter the year : "))
+checkleafyear(year)
+'''''
+import datetime
+import os
+import random
+import string
+import time
+
+'''''
+data = "ASHOK,KUMAR,MOHANTY"
+data = data.split(",")
+for i in data:
+    print(i)
+'''''
+'''''
+#Local Scope & Global Scope
+x=300
+def myfunc():
+    global x
+    x=222
+    print(x)
+
+myfunc()
+print(x)
+'''''
+'''''
+#Iterator In Python - An iterator is an object that contains a countable number of values.
+name1=["ashok", "anita", 22, "sushmita", 33, True]
+print(name1)
+it = iter(name1)
+print(next(it))
+print(next(it))
+print(next(it))
+print(next(it))
+print(next(it))
+print(next(it))
+'''''
+'''''
+for i in range(1,10):
+    print("* "* i)
+for j in range(10-1,0,-1):
+    print("* "*j)
+'''''
+'''''
+#Generator In Python
+def mygenerator():
+    print("Ashok")
+    yield 10
+
+    print("Silu")
+    yield 20
+
+    print("Anu")
+    yield 30
+
+mg = mygenerator()
+it = iter(mg)
+print(next(it))
+print(next(it))
+print(next(it))
+'''''
+'''''
+#Decorator
+def add(n):
+    return n+1
+def sub(n):
+    return n-1
+def details(func,n):
+    return func(n)
+print(details(add,10))
+print(details(sub,10))
+'''''
+'''''
+class Ashok:
+    def __init__(self,id):
+        self.id = id
+    def display(self, name, address):
+        num=10
+        self.name = name
+        self.address = address
+        self.num = num
+        print(self.id,self.num,self.name, self.address)
+a=Ashok(101)
+a.display("ashok_kumar","baripada")
+print(a.name, a.address, a.num, a.id)
+'''''
+'''''
+name=input("Enter your name : \n")
+address=input("Enter your Address: \n")
+number=input("Enter number\n")
+print("Name is :",name,"\n" "Address is :",address,"\n", "Number is :",number,"\n")
+print(type(number))
+n=int(number)
+print(n+2)
+'''''
+'''''
+name=str(input("Enter the name: "))
+if name == "ASHOK":
+    print("Yes Name is : ",name)
+    print("Length is : ",len(name))
+else:
+    print("Name is not matched. "+name+" != ASHOK")
+'''''
+'''''
+#Taking input in list
+n = int(input("Enter limit : "))
+list2 = []
+for i in range(0,n):
+    ele = input("Enter value : ")
+    list2.append(ele)
+print(list2)
+'''''
+'''''
+name2="DIPU 2 IS A GOOD BOY"
+name3="GOOD"
+for i in name2:
+    if "2" in i:
+        print("2 Also present")
+name2=name2.replace("2","10")
+print(name2)
+if name3 in name2:
+    print("Yes Present", name3)
+'''''
+'''''
+#Check Duplicate is Available in list or not
+list1 = ['ashok', 'minu', 'anu', 'True', '100','100','ashok','minu','minu','True']
+list2 = []
+for i in range(len(list1)):
+    k = i+1
+    for j in range(k,len(list1)):
+        if list1[i] == list1[j] and list1[i] not in list2:
+            list2.append(list1[i])
+print("Duplicates are : ", list2)
+'''''
+'''''
+list3=["asncTTksc","acdcd","wqTTsw","awexec"]
+list4 = []
+for i in list3:
+        if "TT" in i or "cd" in i:
+            list4.append(i)
+print(list4)
+'''''
+'''''
+#Check if "TT" available in list then replace it to "tt"
+list3=["asncTTksc","acdcd","wqTTsw","awexec"]
+for i in list3:
+    print(i)
+    if "TT" in i:
+        n=list3.index(i)
+        list3[n] = list3[n].replace("TT","tt")
+
+print(list3)
+'''''
+'''''
+list1=["2","Ashok","Mohanty","900"]
+print(list1)
+list1[3]="100"
+print(list1)
+list1.insert(1,"Das")
+print(list1)
+list1.append("Silu")
+print(list1)
+list1.sort()
+print(list1)
+print(type(list1))
+'''''
+'''''
+list1=[1,2,3,4,"Ashok"]
+for i in range(1,2):
+    list1 += ['Mango']
+    print(list1)        #[1, 2, 3, 4, 'Ashok', 'Mango']
+'''''
+'''''
+#Update Dictionary
+marks = {'Physics':67, 'Maths':87}
+internal_marks = {'Practical':48}
+marks.update(internal_marks)
+print(marks)
+# Output: {'Physics': 67, 'Maths': 87, 'Practical': 48}
+'''''
+'''''
+#Table of 2, 3, 4
+for i in range(1,11):
+    print(("2 X " + str(i) + " = " + str(2*i)) + "\t\t" + (" 3 X " + str(i) + " = " + str(3*i)) + "\t\t" + (" 4 X " + str(i) + " = " + str(4*i)))
+'''''
+'''''
+#OOPS - Class & Object
+class Car:
+    def __init__(self,address):
+        self.address = address
+    def details(self, model, color):
+        self.model = model
+        self.color = color
+    def display(self):
+        print(self.model + " " + self.color + " " + self.address)
+
+class Bike:
+    def __init__(self,address):
+        self.address = address
+    def details(self,model,color):
+        self.model = model
+        self.color = color
+    def display(self):
+        print(self.model + " " + self.color + " " + self.address)
+
+c=Car("Bhubaneswar")
+c.details("Audi-A4","White")
+c.display()
+
+b = Bike("Mumbai")
+b.details("Honda-GoldWings", "White")
+b.display()
+'''''
+'''''
+#Single_Inheritance
+class Car:
+    def __init__(self):
+        pass
+    def details1(self, model, color, address):
+        self.model = model
+        self.color = color
+        self.address = address
+    def display1(self):
+        print(self.model + " " + self.color + " " + self.address)
+
+class Bike(Car):
+    def details2(self, model, color, address):
+        self.model = model
+        self.color = color
+        self.address = address
+    def display2(self):
+        print(self.model + " " + self.color + " " + self.address)
+
+b=Bike()
+b.details2("Audi-A4","White", "Bhubaneswar")
+b.display2()
+b.details1("Honda-GoldWings", "White", "Mumbai")
+b.display1()
+'''''
+'''''
+#Multilevel_Inheritance
+class A:
+    name = "Ashok"
+    id = 100
+class B(A):
+    pin = 757048
+class C(B):
+    city = "Baripada"
+
+cl = C()
+print(str(cl.pin) + " " + cl.city + " " + str(cl.id) + " " + cl.name)
+bl = B()
+print(bl.pin, bl.name)
+'''''
+'''''
+#Multiple_Inheritance
+class A:
+    def name(self):
+        namee = "Ashok"
+        print("My name is ", namee)
+class B:
+    def address(self):
+        add = "Bhubaneswar"
+        print("My Address is ", add)
+class C(A,B):
+    def pin(self):
+        pinn = 751001
+        print("My Pin is ", pinn)
+cc = C()
+cc.pin()
+cc.address()
+cc.name()
+print(issubclass(C,B))
+print(issubclass(C,A))
+print(issubclass(A,C))
+print(issubclass(A,B))
+print(isinstance(cc,A))
+print(isinstance(cc,B))
+print(isinstance(cc,C))
+'''''
+'''''
+#Method_Overriding
+class Animal:
+    def barking(self, sound, name):
+        print(sound ,"Animal is barking - ",name)
+class Dog(Animal):
+    def barking(self, sound):
+        print(sound + "Dog is barking")
+d = Dog()
+d.barking("Bhuuu ")
+d2 = Animal()
+d2.barking("Miao ", "pussy")
+'''''
+'''''
+#Abstract_Method(@abstractmethod)
+from abc import ABC, abstractmethod
+class Car(ABC):
+    def milleage(self):
+        pass
+class Tesla(Car):
+    def milleage(self):
+        print("Milleage is 20")
+class Audi(Car):
+    def milleage(self):
+        print("Milleage is 25")
+class BMW(Car):
+    def milleage(self):
+        print("Milleage is 30")
+t = Tesla()
+t.milleage()
+a = Audi()
+a.milleage()
+b = BMW()
+b.milleage()
+'''''
+'''''
+print(True + True + False - True == 2)
+'''''
+#File Handling in Python -Add line, Append line, Delete line
+'''''
+#File Handling in Python
+file=open('D:\\Python\\abc.txt','r+')
+print(file.read())
+file.write("\nYes I am fine.")
+print(file.read())
+'''''
+'''''
+#Split data available in file.
+with open('D:\\Python\\acc.txt','r') as f:
+    data = f.read()
+    for i in data:
+        line = i.split()
+        print(line)
+
+print(data.split("Hi ASHOK"))
+'''''
+'''''
+#Check the String is available in the file or not.
+file=open('D:\\Python\\acc.txt','r')
+data = file.read()
+print(type(data))
+if "Thank You" in data:
+    print(data)
+'''''
+'''''
+#Add new line at the line number 5th of the file
+file = open("D:\\Python\\abcd.txt","r")
+list1 = list(file)
+list1.insert(5,"ASHOK KUMAR MOHANTY\n")
+file = open("D:\\Python\\abcd.txt","w")
+for i in list1:
+    file.write(i)
+'''''
+'''''
+#Append line
+file=open("D:\\Python\\abc.txt","r+") #read+append
+print(file.read())
+file.write("\nThis is another new line")
+print(file.read())
+'''''
+'''''
+#Delete Particular line using line number
+file = open("D:\\Python\\abc.txt","r")
+lines = file.readlines()
+count = 0
+removelinenumber = 5
+file = open("D:\\Python\\abc.txt","w")
+for i in lines:
+    count = count + 1
+    if count == removelinenumber:
+        pass
+    else:
+        file.write(i)
+'''''
+'''''
+#Delete line with matching string 
+file = open("D:\\Python\\abc.txt","r")
+lines = file.readlines()
+file = open("D:\\Python\\abc.txt","w")
+for i in lines:
+    if i != "Test Case 1\n":
+        file.write(i)
+'''''
+'''''
+# Escape the lines while reading from file.
+file=open("D:\\Python\\abc.txt","r")
+fp = file.readlines()
+for i in fp:
+    if "This is append stuff" in i:
+        continue
+    print(i)
+'''''
+'''''
+from random import randint
+val = random.randint(1,2000)
+if val % 2 == 0:
+    print(val, " is Possitive integer")
+else:
+    print(val, " is Negetive integer")
+'''''
+'''''
+#List to String conversion & Print Complete String as Messege
+list1=["asncksc","cdcd","wqsw",True,"wexec",12]
+name = str(list1)
+name=name.removesuffix("]")
+name=name.removeprefix("[")
+name=name.strip()
+for j in name:
+    if j=="'" or j==',':
+        continue
+    print(j,end="")
+'''''
+'''''
+#Enumerate function - Use for display the index position of value.
+list1=[1,2,3,1,11,2229,212]
+print(list(enumerate(list1)))
+'''''
+'''''
+#Remove space and unwanted character from String.
+name1 = "Ashok"
+name2 = "Kumar"
+name3 = "Mohanty"
+sp = " "
+full_name = name1+sp+name2+sp+name3
+print(full_name)
+print("\n")
+sp = full_name + ". @ ! #"
+print(sp)
+removal = [".","@","!","#"]
+for i in removal:
+    sp = sp.replace(i,"")
+print(sp)
+'''''
+'''''
+#Print Complete List as Messege using replace()
+list1=["asncksc","cdcd","wqsw",True,"wexec",12]
+name = str(list1)
+removal = ["'","[","]",","]
+for i in removal:
+    name = name.replace(i,"")
+print(name)
+
+#Print Complete List as Messege using loop
+list1=["asncksc", "cdcd", "wqsw", True, "wexec", 12]
+print(list1)
+for i in list1:
+    print(i, end=" ")
+'''''
+#Exception Handling in Python.
+'''''
+ZeroDivisionError: Occurs when a number is divided by zero.
+NameError: It occurs when a name is not found. It may be local or global.
+IndentationError: If incorrect indentation is given.
+IOError: It occurs when Input Output operation fails.
+EOFError: It occurs when the end of the file is reached, and yet operations are being performed.
+'''''
+'''''
+ammount = 1000
+try:
+    if ammoun > 10000:
+        print("Ammount is " + str(ammount))
+except NameError:
+    print("Error")
+else:
+    print("Everything is correct.")
+'''''
+'''''
+try:
+    a = int(input("Enter a value : "))
+    b = int(input("Enter b value : "))
+    c = a/b
+    print(c)
+except Exception:
+    print("a can not divisible by b")
+'''''
+'''''
+#List Comprehension
+list1 = ["Ashok", "Minu", "Silu", "Anu"]
+list11 = [i for i in list1 if "A" in i]
+print(list11)
+
+list2 = [i for i in range(1,10,2)]
+print(list2)
+
+list3 = [i for i in range(10) if i>5]
+print(list3)
+
+names = [i.upper() for i in list1]
+print(names)
+
+new_name = [i for i in names if "Minu" not in i]
+print(new_name)
+'''''
+'''''
+# Lambda Function. It is a small annonymous function.
+# A Lambda Function can take any number of arguments but can only take one expression
+a = lambda x : x + 10
+print(a(10))
+
+def func(n):
+    return lambda a : n * n
+res = func(10)
+print(res(1))
+
+def func2(m):
+    return lambda a : a * m * 20
+res = func2(10)
+print(res(12))
+'''''
+'''''
+#OS MODULE in Python
+import os
+print(os.getcwd())              #Current Working Directory
+#os.chdir("../")                #Change Directory
+#print(os.getcwd())
+#os.mkdir("D:\\Silu\\Mohanty")   #Make Directory
+#print(os.listdir("D:\\"))       #Listout files & directory #Return Value as a list
+#os.rmdir("D:\\Silu")            #Remove Directory
+#os.remove("D:\\abc.txt")        #Remove File
+#print(os.name)                   #Name of the OS dependent module import
+#os.rename("D:\\abc.txt","D:\\new.txt")  #Rename file
+#print(os.path.exists("D:\\abcc.txt"))   #Check Path is exist or not.
+#print(os.path.getsize("D:\\abc.txt"))   #Give the size of file in bytes.
+'''''
+'''''
+#Command Line Argument
+import sys
+print("No of argument passed : ",len(sys.argv))
+print(sys.argv[0]) #Print file name
+sum = 0
+for i in range(1,len(sys.argv)):
+    print(i,"st Argument : ",sys.argv[i])
+    sum = sum + int(sys.argv[i])
+print("Sum is : ",sum)
+'''''
+'''''
+##IMPORTANT##
+#Display only the 1st Character of all letter present in the string.
+name = "Hi Ashok Kumar Mohanty. I am contacting you through email but you didn't give response."
+name = name.split(" ")
+count = len(name)
+for i in range(count):
+    print(name[i][0])
+
+#Display only the 1st Character of all word present in the string except last word.
+name = "Hi Ashok Kumar Mohanty. I am contacting you through email but you didn't give response."
+name = name.split(" ")
+count = len(name)
+for i in range(count-1):
+    print(name[i][0])
+
+#List to Dictionary conversion
+list1 = ["Ashok","Minu","Silu","Anu"]
+def func(list1):
+    global res
+    res = {list1[i]:list1[i+1] for i in range(0,len(list1),2)}
+    return res
+print(func(list1))
+print(res.keys())
+print(res.values())
+
+#Dictionary to List Conversion
+d_dict = {'Ashok': 'Minu', 'Silu': 'Anu'}
+list1 = []
+data = str(d_dict)
+removal = ["'","{","}",",",":"]
+for i in removal:
+    data = data.replace(i,"")
+list1 = data.split(" ")
+print(list1)
+
+#Count Characters from String
+name = "PAABCZZZA"
+for i in range(len(name)-1):
+    if name[i] != name[i+1]:
+        print(name[i],name.count(name[i]),end=" ")
+        
+#Count Same Word from Complete String
+name = "Ashok Kumar Ashok Mohanty Ashok Kumar Kumar"
+name = name.split(" ")
+name2 = []
+for i in name:
+    if i not in name2:
+        name2.append(i)
+        print(i,name.count(i))
+
+#Print Similar Word Present in Complete Sentence
+name = "Ashok Kumar Ashok Mohanty Ashok Kumar Kumar"
+name = name.split(" ")
+list1 = []
+for i in name:
+    if name.count(i) > 1 and i not in list1:
+        list1.append(i)
+        print(i) 
+
+#Print Similar Letter Present in Complete Sentence
+name = "MINDFIRE SOLUTIONS"
+name2 = ""
+for i in name:
+    if name.count(i) > 1 and i not in name2:
+        print(i,end=" ")
+        name2 = name2+i
+
+#Change "Bikash" to "BIKASH" except 1st "Bikash"
+list1 = ["Ashok","Bikash","Ni","dwsdx","Bikash","Ni","Ashok","Bikash","Ni","Bikash"]
+num = list1.index("Bikash")
+for i in range(num+1,len(list1)):
+    if list1[i] == "Bikash":
+        list1[i] = list1[i].replace(list1[i],"BIKASH")
+print(list1)
+
+#Replace "Ni" to "Nikesh" except last "Ni"
+list2 = ["Ashok","Bikash","Ni","dwsdx","Bikash","Ni","Ashok","Bikash","Ni","Bikash"]
+count = 0
+for i in range(len(list2)-1,0,-1):
+    if list2[i] == "Ni":
+        if count == 0:
+            pass
+        if count >= 1:
+            index = list2.index(list2[i])
+            list2[index] = list2[index].replace(list2[i],"Nikesh")
+    count = count + 1
+print(list2)
+'''''
+'''''
+#Return type in python
+-> Python return statement - we can return any values/Expression through return keyword.
+                            That may be sring, integer, list etc...
+                            In Python, you can return multiple values by simply return them separated by commas.
+-> How do you find the return type of a function in Python?
+Ans:- type() is the function that returns the type of an object passed to argument. 
+
+# This function returns an object of Test.
+def fun():
+    return Test()
+t = fun() 
+
+-> lambda function -  The lambda functions do not need a return statement, they always return a single expression.
+-> iter() function - iter() function returns an iterator for the given object.
+-> next() function - next() function returns the next item in an iterator.
+-> Generator :- Its return the iterator object.
+-> decorator :- 
+What is the return type of decorator in Python?
+- Decorators in Python are very powerful which modify the behavior of a function without modifying it permanently. 
+- It basically wraps another function and since both functions are callable, it returns a callable.
+'''''
+#print(chr(65))
+'''''
+n=0
+for i in range(10):
+    n=i+1
+    pass
+print(n)
+
+list1 = ["Ashok","Bikash","Ni","dwsdx"]
+dct = {i:list1[i] for i in range(0,len(list1),1)}
+print(dct)
+
+#Write a program to print: "Ashok works in Mindfire" using f String.
+name = "Ashok"
+company = "Mindfire"
+print(f"{name} works in {company}")
+
+#Turn word's 2nd Letter as a capital Letter
+name = "Ashok Kumar Mohanty"
+name2 = name.split(" ")
+for i in name2:
+    i = i.replace(i[1],i[1].upper())
+    print(i,end=" ")
+
+
+import random
+list1 = ["ashok","silu","jena","pr","aaas"]
+print(random.choice(list1))
+print(random.randint(1,20))
+
+#Random Password Creation
+import random
+alphabets1 = "abcdefghijklmnopqrstuvwxyz"
+alphabets2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+numbers = "0123456789"
+symbols = "!@#$%^&*()_+="
+Total = alphabets1 + alphabets2 + numbers + symbols
+print("".join(random.sample(Total,16)))
+
+import datetime
+print(datetime.date.today()) #2022-01-12 12:20:30.207823
+time.sleep(2)
+print(datetime.datetime.today())
+
+names = []
+for i in range(3):
+    data = str(input("Enter the data : "))
+    print("Entered Data is : ",data," And Left list Space is : ",3-(i+1))
+    names.append(data)
+print(names)
+
+import string
+for i in string.ascii_uppercase:
+    print(i,end=" ")
+for j in string.ascii_lowercase:
+    print(j,end=" ")
+'''''
+'''''
+#Remove duplicate words from the sentence
+from collections import OrderedDict
+name = "Ashok Kumar Ashok Mohanty Ashok Kumar Mohanty Kumar Silu"
+name2 = name.split(" ")
+print(" ".join(OrderedDict.fromkeys(name2)))
+'''''
+'''''
+#Remove duplicate letter of every words separately
+from collections import OrderedDict
+name = "myay nanmee iss Yoouu"
+list1 = name.split(" ")
+for i in list1:
+    name2 = "".join(OrderedDict.fromkeys(i))
+    print(name2,end=" ")
+'''''
+'''''
+#Remove 3rd position of every word
+name = "myay fdsfv vsde nanmee iss Yoouu"
+list1 = name.split(" ")
+for i in list1:
+    print(i[0:2]+i[3:],end=" ")
+'''''
+'''''
+#Method OverRiding using Super keyword
+class A:
+    def myFunc(self,number):
+        self.number = number
+        print("This is myFunc, Number is",number)
+class B(A):
+    def myFunc(self,number,name):
+        super(B, self).myFunc("100")
+        self.number = number
+        self.name = name
+        print("This is myFunc2, Number is",number,".","Name is",name)
+
+a = B()
+a.myFunc(100,"Dash")
+'''''
+
+file = open("D:\\demo.txt","r")
+all_data = file.readlines()
+print(all_data)
+file2 = open("D:\\demo.txt","w")
+for i in range(len(all_data)):
+    if "computer" in all_data[i]:
+        all_data[i] = all_data[i].replace("computer","system")
+        file2.write(all_data[i])
+    else:
+        file2.write(all_data[i])

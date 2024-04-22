@@ -1,0 +1,164 @@
+JAVA SELENIUM INTERVIEW:-
+---------------------------
+Java:-
+Explain public static void main(String args[])- 
+Access modifiers- 
+Explain Oops- 
+wrapper class- 
+Encapsulation- 
+getter vs setter- 
+Is it possible to write 2 main method inside a class? If no why?- 
+Constructor- return type, how it calls, overloading, overriding possible?- 
+Polymorphism-Overloading & Overriding- 
+Can we override a main method? Can we overload a main method? - 
+Can construtor be static ?- 
+Inheritance- Explain & Is multiple inheritance suppored in java?If no why?- 
+Interface- Expain,What it's contains? Can you inherit a interface to another interface ?- 
+Abstraction- Expain, is Instantiated,Overriding,overloading,inherit by interface possible?- 
+Checked VS Unchecked exceptions, how we can handle this?-  
+== vs equals() - 
+final,finally & finalize - 
+super vs this keyword - 
+throw vs throws vs throwable - 
+Array vs ArrayList - 
+
+Programming questions   1-> Count the vowels in a string & print using character						- 
+			2-> Print/Delete the similar character present in a string(with collection/without collection)		- 
+			3-> WAP to print the alphabets in your name and the number of time it appears(without using collection).- 
+			4-> Remove specific word from a complete string - Input = "This ^is^ Programming <and> Concept"
+									  Output = "This Programming Concept"			- 
+			5-> Reverse a String.											- 
+			6-> Print sum of number present in a string.								- 
+					Input:- "Hey 29 How 51 are 20 you"
+					Output:- 29+51+20 = 100
+			7-> WAP to find unique character in a string.								- 
+					input:-AABCCCDDEEF
+					output:-ACDE
+			8-> WAP to convert a number to weeks & days.								-
+					Input:- 30
+					Output:- 4weeks 2days
+			9-> WAP to generate a Random unique string prefixed with your name					-
+			10-> WAP to convert a date to this format(mm-dd-yyyy) 							-
+			11-> WAP to sort "selenium" in alphabetical order without using any inbuilt method.			-
+			12-> WAP to merge two arrays into single array without using inbuilt methods.				-
+				a[] = {1, 3,2,5,4}
+				b[]= {7,6,9,8,10}
+
+
+Selenium:-
+Selenium WebDriver Architecture- 
+WebDriver(I),RemoteWebDriver(C) - 
+WebElement vs WebElements - 
+Open Firefox browser - 
+How to Maximize window - 
+get() vs navigate.to()- 
+Locators in selenium- 
+Find some element using this link http://the-internet.herokuapp.com/challenging_dom - 
+Xpath vs CssSelector- 
+/ vs // in xpath- 
+Waits & write syntax for visibilityOfElementLocated Explicit wait- 
+What is Window handle method, switch tab- 
+TakeScreenshot(I)- 
+How to open a link in new tab?- 
+How to validate valid link present in the Webpage?- 
+frame & iframe -Expalin,(Is it possible to drag & drop one data from one iframe to another iframe present in different frame?)- 
+Alerts in selenium - 
+Enter cntl+c & cntl+v using action keyword- knows
+How to handle Stale Element Reference Exception- 
+illegalStateOf Exception(driver path is not correct) - 
+invalidArgument Exception(http/https required) - 
+
+Cucumber:-
+scenario vs scenario outline- 
+Keywords in Cucumber(Given, When, Then, And) Explain.- 
+How to pass a string in feature file ? - 
+How to pass multile data using feature file?- 
+use of test runner- 
+glue keyword- 
+hook(@Before, @After)- 
+
+TestNG:-
+testng.xml- 
+How to disable/ignore a particular method ?@Test(enabled="false")- 
+How to pass parameter ?- 
+How to execute parallel execution ?parallel="methods" - 
+annotations- correct
+priority- correct
+what is invocationCount?- wrong
+Assert(hard assert & soft assert)- 
+@DataProvider annotaion- 
+
+Framework:-
+What is POM- 
+Flow of your working framework- 
+properties file- 
+PageFactory- 
+DataDriven vs KeywordDriven- 
+
+Manual Testing:- 
+Waterfall vs Agile-
+Bug lifecycle- 
+Smoke - 
+Sanity - 
+Regression - 
+WhiteBox/BlackBox - 
+bug & defect - 
+priority & severity - 
+
+API:-
+Patch vs Put- p.a.
+How to add query parameter in restassured ?- 
+URL vs URI- 
+status code- 403, 401, 502 - 
+webservices vs api- 
+
+Mobile Testing:-
+android & ios extension-
+
+
+SQL:-
+Create,Drop DB-
+Create table, Insert value in to table-
+Types of join-
+Update vs Delete Command in SQL-
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+HIGH LEVEL QUESTIONS :-
+-----------------------
+
+OOPS concepts- explain properly based on the framework, Explain where are you using inheritance/polymorphism/interface concept in your project.- explained theory & p.a. framework.
+where are you using Constructor concept in your automation project.- p.a.
+What type of bug have you logged recently from your automation project. Explain Severity/Priority- a.
+
+
+Difference between method overloading and overriding- 
+Can we override private methods- correct
+Can we override static methods- wrong
+What is hashmap ? Where you use in your project? - 
+Explain high level logic to print the length of a string without using length function- wrong
+Explain high level logic on how to sort elements in an array- 
+Explain what is difference between array and array list and why you have used it in framework- wrong
+Difference between throw and throws keyword- wrong
+
+Framework knowledge- POM(Model)+BDD(Framework)+TDD(Framework) - 
+What is POM ? Is it a framework or model? - 
+Difference btwn POM & Page Factory- 
+What is @FindBy Annotation- wrong
+Listener in TestNG- 
+
+How to get the count of rows from webtable- 
+How to verify a checkbox is selected or not(isSelected() method)- 
+How to verify radio button is enabled or not(isEnabled() method)- 
+How to get the value from a text box having inputted value in it(getAttribute() method)- 
+How can we print the values from a drop down- 
+What is Select ?(Is it a class or method)- 
+Explain Select s = new Select(driver.findElement(By.id("fruit"))); 
+What are the methods present inside the SELECT class ? selectByIndex(), selectByValue(), selectByVisibleText() . - 
+What is getOption() method ? Where do you use this ?- 
+How to drag & drop one element from source to destination(Write Syntax) ? - 
+Actions in Selenium - 
+Syntax for deleting cookies- knows
+Write syntax for switch from one window to another window- knows
+driver.quit() vs driver.close()- 
+
+
