@@ -1,0 +1,25 @@
+AWS Interview Questions ✨
+
+Some of the Basic and Most asked interview questions 
+->What is AWS?
+->What is a cloud? 
+->What is EC2? 
+->What is S3?
+->What is a lambda, what is the use of it?
+->Difference between NaCl and SG? ->S3 lifecycle? 
+->What is the use of the IAM role?
+->How many subnets are assigned to the routing table? 
+->What is the static IP? 
+->How will get access to private subnets? 
+->Can you increase the size of the root volume without shutting down the instance? 
+->Df –h?
+->What is the hosted zone and what uses of the recordset? 
+->How do you connect to Windows instances? 
+->Port numbers of RDP, SSH, and HTTPS? 
+->What is the difference between EBS, S3, and EFS? 
+->What type of data do you store in s3 and EBS? 
+->Replication s3? 
+->What is the difference between VPC-level security and system-level security? 
+->What is .pem key ?
+->If you lost the pem file then how will you connect to EC2?
+->

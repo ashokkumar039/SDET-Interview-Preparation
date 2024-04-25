@@ -1,0 +1,49 @@
+Let's Discuss OOPS concepts, that are really important for every Automation QA Engineer!
+.
+.
+
+
+So sharing Top 4 important concepts for it that are:
+
+1) Abstraction
+2) Encapsulation
+3) Inheritance
+4) Polymorphism
+
+1) Abstraction:
+----------------
+Abstraction is a process of hiding implementation details and the user does not have to know what is happening behind the scenes.
+
+Example - When you turn ON the laptop you press the power button of your laptop and once the display is ON. You don’t care about the inner mechanism.
+Code and example - https://lnkd.in/d5V6hWBc
+
+
+2) Encapsulation:
+------------------
+Encapsulation is the mechanism that binds together code and data it manipulates. Technically Data Encapsulation can be defined as wrapping the code or methods and the related fields or variables together as a single unit.
+In object-oriented programming, we call this single unit — a class, interface etc.
+
+Encapsulation in java can be achieved by the following:
+- By defining the variables of a class as private
+- Using getter and setter methods to modify and read variable values
+
+
+3) Inheritance:
+----------------
+Inheritance is one of the most important concepts of OOPs. Inheritance is the process by which one object acquires the properties of another object.
+If we want to understand it from the real world perspective we can take the example of the vehicle where a Car, Bus and Bike all come under the category called Vehicle.
+Inheritance represents an IS-A relationship which is also known as a parent-child relationship.
+
+The main reason why we use inheritance is below:
+- Method overriding which we will see in the explanation of Polymorphism
+- Code reusability
+
+Types:  1) Single Level
+	2) Multi Level inheritance
+	3) Hierarchy inheritance
+	4) Multiple inheritance - not supported in java for classes, can be used with Interfaces.
+
+
+4) Polymorphism:
+Polymorphism is an important concept of object-oriented programming. It simply means more than one form.
+Compile Time(Method Overloading) & Runtime(Method Overriding) Polymorphism.

@@ -1,0 +1,116 @@
+Have you used OOPS in your framework?
+.
+.
+
+This is how I have used OOPS:
+
+Have you used the OOPS concept in your Framework ? Where and How?
+
+1. Classes and Objects:
+-----------------------
+i. Page Object Classes were created for each unique ui component.
+
+
+2. Encapsulations:
+-------------------
+i. As Instance variables are the most important variable in your entire app
+code. We ensure that instance variables are private and are only accessed
+via getters and setters.
+ii. Example POJO Classes.
+
+🔴 Encapsulation:
+Question: 
+How can encapsulation be applied to manage WebDriver instances in Selenium tests?
+
+Answer:
+
+import org.openqa.selenium.WebDriver;
+public class WebDriverManager {
+ private WebDriver driver;
+ 
+ public WebDriver getDriver() {
+ if (driver == null) {
+ // Initialize WebDriver here
+ }
+ return driver;
+ }
+}
+
+
+3. Inheritance:
+----------------
+i. In order to make code reusable we implement Child and Parent Class
+relationship.
+
+ii. Test Base class is parent class for test classes
+
+iii. IJson Is an interface implement by all api pojo which helped in achieving
+loose coupling
+
+🔴 Inheritance:
+Question: 
+How does the Page Object Model (POM) utilize inheritance in Selenium tests?
+
+Answer:
+public class BasePage {
+ // Common page elements and methods
+}
+
+public class HomePage extends BasePage {
+ // Page-specific elements and methods
+}
+
+4. Abstraction:
+---------------
+i. We have hidden the complexity of selenium, rest assured and Appium by
+creating browser utility classes/android utility and api helper classes
+
+ii. These classes have wrapped the complex selenium/restassured and APPIUM
+code so that people who are writing test need not need to learn or deal with
+any of these libraries. Hence in this way abstraction was achieved.
+
+
+5. Polymorphism:
+----------------
+i. We have ensured that function names are reusable because it helps in
+remembering less names and functionalities.
+
+ii. So, for that we did method overloading. That’s the compile time
+polymorphism
+
+🔴 Overloading:
+Question: 
+How would you create overloaded methods for finding elements using Selenium WebDriver?
+
+Answer:
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class ElementFinder {
+ public WebElement findElement(WebDriver driver, String locator) {
+ return driver.findElement(By.xpath(locator));
+ }
+ 
+ public WebElement findElement(WebDriver driver, By locator) {
+ return driver.findElement(locator);
+ }
+}
+
+🔴 Overriding:
+Question: 
+Describe a scenario where you would override the toString() method in a custom WebElement class for logging purposes in Selenium.
+
+Answer:
+
+import org.openqa.selenium.WebElement;
+public class CustomWebElement extends WebElement {
+ @Override
+ public String toString() {
+ return "Custom element with tag name: " + this.getTagName();
+ }
+}
+
+6. PRO Tip :
+------------
+In order to use OOPs effectively we have ensured to use Design Patterns for our classes.
